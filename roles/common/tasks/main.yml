@@ -15,3 +15,7 @@
     - build-essential
     - flex
   sudo: yes
+
+- name: install git
+  apt: name=git state=latest
+  sudo: yes
