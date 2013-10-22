@@ -5,3 +5,13 @@
   apt: update_cache=yes cache_valid_time=3600
   tags: apt
   sudo: yes
+
+- name: install build essentials
+  apt: name=$item state=installed
+  with_items:
+    - autoconf
+    - binutils-doc
+    - bison
+    - build-essential
+    - flex
+  sudo: yes
