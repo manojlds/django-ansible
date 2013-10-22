@@ -1,0 +1,7 @@
+---
+# file: roles/common/tasks/main.yml
+
+- name: update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+  tags: apt
+  sudo: yes
