@@ -1,0 +1,5 @@
+---
+name: 'pari'
+server_name_no_www: 'ruralindiaonline.org'
+server_name: 'www.ruralindiaonline.org'
+source_path: '/pari'

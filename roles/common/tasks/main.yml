@@ -19,3 +19,18 @@
 - name: install git
   apt: name=git state=latest
   sudo: yes
+
+#- name: Installing npm
+#  npm: name=less global=yes state=present
+#  sudo: True
+
+
+- name: install essential packages
+  apt: name=$item state=installed
+  with_items:
+    - libjpeg-dev
+    - libpng-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - libmemcached-dev
+  sudo: True

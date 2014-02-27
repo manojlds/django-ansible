@@ -1,0 +1,12 @@
+---
+- name: ensure packages are installed
+  apt: pkg={{item}} state=present update_cache=yes
+  with_items:
+        - postgresql
+        - postgresql-contrib-9.1
+        - libpq-dev
+        - python-psycopg2
+  sudo: True
+- name: Restart postgresql server
+  service: name=postgresql state=restarted enabled=yes
+  sudo: True

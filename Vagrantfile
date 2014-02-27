@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   
-  config.vm.box = "debian-7.1.0"
+  config.vm.box = "precise32"
 
   config.vm.network :private_network, ip: "192.168.33.10"
 
